@@ -20,10 +20,10 @@ const Navbar = () => {
                             <Link className="nav-link" to="/about">About Us</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/">Link</Link>
+                            <Link className="nav-link" to="/about">Link</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="https://www.linkedin.com/in/bharatsharma1909/" target="_blank">Contact Me</a>
+                            <a className="nav-link" href="https://www.linkedin.com/in/bharatsharma1909/" target="_blank" rel="noopener noreferrer">Contact Me</a>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
