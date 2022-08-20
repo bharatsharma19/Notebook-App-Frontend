@@ -8,7 +8,6 @@ import Navbar from './components/Navbar';
 import About from './components/About';
 import Other from './components/Other';
 import NoteState from './context/notes/NoteState';
-import Alert from './components/Alert';
 
 function App() {
   return (
@@ -16,9 +15,6 @@ function App() {
       <NoteState>
         <Router>
           <Navbar />
-          <div style={{ marginTop: "60px" }}>
-            <Alert message="This" />
-          </div>
           <div className="container">
             <Route exact path="/">
               <Home />

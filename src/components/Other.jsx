@@ -3,7 +3,7 @@ import React from 'react'
 const Other = () => {
 
     return (
-        <div>
+        <div style={{ marginTop: "60px" }}>
             Other
         </div>
     )

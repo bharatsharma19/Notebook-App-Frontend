@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
 
     return (
-        <div>
+        <div style={{ marginTop: "60px" }}>
             About
         </div>
     )
