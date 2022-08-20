@@ -9,7 +9,6 @@ const Home = () => {
       <div style={{ marginTop: "60px" }}>
         <Alert message="Alert" />
       </div>
-      <AddNote />
       <div className="container my-4">
         <Notes />
       </div>
