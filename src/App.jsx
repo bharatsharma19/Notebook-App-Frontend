@@ -6,6 +6,7 @@ import {
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import About from './components/About';
+import Other from './components/Other';
 import NoteState from './context/notes/NoteState';
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route exact path="/about">
             <About />
+          </Route>
+          <Route exact path="/other">
+            <Other />
           </Route>
         </Router>
       </NoteState>
