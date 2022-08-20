@@ -37,20 +37,7 @@ const NoteState = (props) => {
       body: JSON.stringify({ title, desc, tag }),
     });
 
-    const json = await response.json();
-    console.log(json);
-
-    const note = [
-      {
-        _id: "63011f5ab1b8f74fa21652f9",
-        user: "62f4044bc3cd607dac73ec4c",
-        title: title,
-        desc: desc,
-        tag: tag,
-        date: "2022-08-20T17:52:26.719Z",
-        __v: 0,
-      },
-    ];
+    const note = await response.json();
     setNotes(notes.concat(note));
   };
 
@@ -66,8 +53,6 @@ const NoteState = (props) => {
       },
     });
     const json = response.json();
-    console.log(json);
-
     const newNotes = notes.filter((note) => {
       return note._id !== id;
     });
@@ -87,7 +72,6 @@ const NoteState = (props) => {
       body: JSON.stringify({ title, desc, tag }),
     });
     const json = response.json();
-    console.log(json);
 
     let newNotes = JSON.parse(JSON.stringify(notes));
     // Logic to edit in Client
