@@ -63,16 +63,18 @@ const NoteState = (props) => {
 
   // Add a Note
   const addNote = (title, description, tag) => {
+    console.log("Adding a new Note");
+
     const note = {
       _id: "62ff85e7a488ffbbea0a880021",
       user: "62f4044bc3cd607dac73ec4c",
-      title: "Note 3",
-      desc: "Addeddasaaaaaa",
-      tag: "General",
+      title: title,
+      desc: description,
+      tag: tag,
       date: "2022-08-19T12:45:30.241Z",
       __v: 0,
     };
-    setNotes(notes.push(note));
+    setNotes(notes.concat(note));
   };
 
   // Delete a Note
