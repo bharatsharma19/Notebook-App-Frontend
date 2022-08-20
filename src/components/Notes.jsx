@@ -13,9 +13,7 @@ const Notes = () => {
     }, [])
 
     const ref = useRef(null)
-
     const refClose = useRef(null)
-
     const [note, setNote] = useState({ id: "", etitle: "", edesc: "", etag: "" })
 
     const updateNote = (currentNote) => {
@@ -25,7 +23,7 @@ const Notes = () => {
 
     const handleClick = (e) => {
         editNote(note.id, note.etitle, note.edesc, note.etag)
-        refClose.current.click()
+        refClose.current.click();
     }
 
     const onChange = (e) => {
