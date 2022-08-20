@@ -71,7 +71,7 @@ const NoteState = (props) => {
       },
       body: JSON.stringify({ title, desc, tag }),
     });
-    const json = response.json();
+    const json = await response.json();
 
     let newNotes = JSON.parse(JSON.stringify(notes));
     // Logic to edit in Client
