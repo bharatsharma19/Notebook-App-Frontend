@@ -20,7 +20,7 @@ const AddNote = () => {
     return (
         <div>
             <div className="container my-2">
-                <h2 className='text-center'>Add a Note</h2>
+                <h3 className='text-center'>Add a Note</h3>
                 <form className='my-3'>
                     <div className="col s12">
                         <div className="row">
