@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 const Signup = (props) => {
 
-    const [credentials, setCredentials] = useState({ name: "", email: "", password: "", cpassword: "" });
+    const [credentials, setCredentials] = useState({ name: "", email: "", password: "" });
 
     let history = useHistory();
 
@@ -24,9 +24,9 @@ const Signup = (props) => {
         const json = await response.json();
 
         if (json.success) {
-            localStorage.setItem('token', json.authtoken)
-            history.push("/")
+            localStorage.setItem("token", json.authToken)
             props.showAlert("Account created Successfully", "success")
+            history.push("/")
         }
         else {
             props.showAlert("User Already exists with this Email Address", "danger")
@@ -51,16 +51,16 @@ const Signup = (props) => {
                         </div>
                         <div className="form-group my-3">
                             <label htmlFor="email">Email address</label>
-                            <input type="email" className="form-control" id="email" name='email' onChange={onChange} aria-describedby="emailHelp" placeholder="Enter your Email Id" required />
+                            <input type="email" className="form-control" id="email" name='email' onChange={onChange} aria-describedby="emailHelp" placeholder="Enter your Email Id" autoComplete='email' required />
                             <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div className="form-group my-3">
                             <label htmlFor="password">Password</label>
-                            <input type="password" className="form-control" id="password" name='password' onChange={onChange} placeholder="Enter your Password" minLength={7} required />
+                            <input type="password" className="form-control" id="password" name='password' onChange={onChange} placeholder="Enter your Password" autoComplete='current-password' minLength={7} required />
                         </div>
                         <div className="form-group my-3">
                             <label htmlFor="cpassword">Confirm Password</label>
-                            <input type="password" className="form-control" id="cpassword" name='cpassword' onChange={onChange} placeholder="Enter your Password Again" minLength={7} required />
+                            <input type="password" className="form-control" id="cpassword" name='cpassword' onChange={onChange} placeholder="Enter your Password Again" autoComplete='current-password' minLength={7} required />
                         </div>
                         <div className="text-center">
                             <button type="submit" className="btn btn-outline-success my-3" >Sign Up</button>

@@ -44,12 +44,12 @@ const Login = (props) => {
                     <form onSubmit={handleSubmit}>
                         <div className="form-group my-3">
                             <label htmlFor="email">Email address</label>
-                            <input type="email" className="form-control" id="email" name='email' onChange={onChange} value={credentials.email} aria-describedby="emailHelp" placeholder="Enter email" required />
+                            <input type="email" className="form-control" id="email" name='email' onChange={onChange} value={credentials.email} aria-describedby="emailHelp" placeholder="Enter email" autoComplete='email' required />
                             <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div className="form-group my-3">
                             <label htmlFor="password">Password</label>
-                            <input type="password" className="form-control" id="password" name='password' onChange={onChange} value={credentials.password} placeholder="Password" required />
+                            <input type="password" className="form-control" id="password" name='password' onChange={onChange} value={credentials.password} placeholder="Password" autoComplete='current-password' required />
                         </div>
                         <div className="text-center">
                             <button type="submit" className="btn btn-outline-success my-3" >Sign In</button>
