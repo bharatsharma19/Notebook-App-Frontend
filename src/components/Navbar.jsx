@@ -30,8 +30,8 @@ const Navbar = () => {
                         </li>
                     </ul>
                     <form className="d-flex">
-                        <Link className="btn btn-outline-primary mx-2" to="/login" role="button">Sign In</Link>
-                        <Link className="btn btn-outline-primary mx-2" to="/signup" role="button">Sign Up</Link>
+                        <Link className="btn btn-outline-primary mx-1" to="/login" role="button">Sign In</Link>
+                        <Link className="btn btn-outline-primary mx-1" to="/signup" role="button">Sign Up</Link>
                     </form>
                 </div>
             </div>
