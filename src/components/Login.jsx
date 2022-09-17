@@ -1,8 +1,11 @@
 import React from 'react'
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 const Login = () => {
     const [credentials, setCredentials] = useState({ email: "", password: "" });
+
+    let history = useHistory();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -16,6 +19,14 @@ const Login = () => {
         });
 
         const json = await response.json();
+
+        if (json.success) {
+            localStorage.setItem('token', json.authtoken)
+            history.push("/")
+        }
+        else {
+            alert("Wrong")
+        }
 
         console.log(json)
     }
