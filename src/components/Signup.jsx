@@ -41,27 +41,30 @@ const Signup = (props) => {
 
     return (
         <div style={{ marginTop: "60px" }}>
-            <div className="container">
-                <div className="container">
+            <div className="container" style={{ display: "flex", width: "50vw" }}>
+                <div className="container my-2">
+                    <h3 className='text-center'>Create an Account</h3>
                     <form onSubmit={handleSubmit}>
-                        <div className="form-group">
+                        <div className="form-group my-3">
                             <label htmlFor="name">Your Name</label>
                             <input type="text" className="form-control" id="text" name='name' onChange={onChange} aria-describedby="text" placeholder="Enter your Name" minLength={3} required />
                         </div>
-                        <div className="form-group">
+                        <div className="form-group my-3">
                             <label htmlFor="email">Email address</label>
-                            <input type="email" className="form-control" id="email" name='email' onChange={onChange} aria-describedby="emailHelp" placeholder="Enter email" required />
+                            <input type="email" className="form-control" id="email" name='email' onChange={onChange} aria-describedby="emailHelp" placeholder="Enter your Email Id" required />
                             <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
-                        <div className="form-group">
+                        <div className="form-group my-3">
                             <label htmlFor="password">Password</label>
-                            <input type="password" className="form-control" id="password" name='password' onChange={onChange} placeholder="Password" minLength={7} required />
+                            <input type="password" className="form-control" id="password" name='password' onChange={onChange} placeholder="Enter your Password" minLength={7} required />
                         </div>
-                        <div className="form-group">
+                        <div className="form-group my-3">
                             <label htmlFor="cpassword">Confirm Password</label>
-                            <input type="password" className="form-control" id="cpassword" name='cpassword' onChange={onChange} placeholder="Password" minLength={7} required />
+                            <input type="password" className="form-control" id="cpassword" name='cpassword' onChange={onChange} placeholder="Enter your Password Again" minLength={7} required />
                         </div>
-                        <button type="submit" className="btn btn-outline-success my-3" >Sign Up</button>
+                        <div className="text-center">
+                            <button type="submit" className="btn btn-outline-success my-3" >Sign Up</button>
+                        </div>
                     </form>
                 </div>
             </div>
