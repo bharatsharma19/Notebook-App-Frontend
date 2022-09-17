@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-const Signup = () => {
+const Signup = (props) => {
 
     const [credentials, setCredentials] = useState({ name: "", email: "", password: "", cpassword: "" });
 
@@ -26,9 +26,10 @@ const Signup = () => {
         if (json.success) {
             localStorage.setItem('token', json.authtoken)
             history.push("/")
+            props.showAlert("Account created Successfully", "success")
         }
         else {
-            alert("Wrong")
+            props.showAlert("User Already exists with this Email Address", "danger")
         }
 
         console.log(json)
