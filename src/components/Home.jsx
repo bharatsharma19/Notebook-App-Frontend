@@ -1,6 +1,5 @@
 import React from 'react'
 import Notes from './Notes'
-import Alert from './Alert';
 
 const Home = (props) => {
 
